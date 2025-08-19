@@ -2,6 +2,9 @@
 
 クラスメソッドのスライドデザインを参考に作成したMarpテーマです。
 
+## 参考スライド
+https://classmethod.github.io/classmethod-marp-theme/sample-slide.html
+
 ## 特徴
 
 1. 📝 マークダウンでクラスメソッドのスライドデザインのスライドが作成可能
@@ -10,31 +13,9 @@
 
 ## 利用方法
 
-### VSCodeでの設定方法
-1. VSCodeの設定を開く（`Cmd+,` または `Ctrl+,`）
-2. 検索ボックスで「`Markdown › Marp: Themes`」を検索
-3. 「項目の追加」をクリック
-4. `あとでURLを入力`←のリンクを入力
-5. Markdownファイルの先頭でテーマを指定
+クラスメソッドMarpテーマ セットアップスライドをご覧ください。
 
-### CLIでの利用
-
-1. Marp形式で作成したマークダウンファイルを用意
-2. Markdownファイルの先頭でテーマを指定
-3. 以下のコマンドを実行
-
-```bash
-npx @marp-team/marp-cli@latest slide-deck.md --theme あとでURLを入力
-```
-
-
-### テーマの指定方法
-```md
----
-marp: true
-theme: classmethod
----
-```
+https://classmethod.github.io/classmethod-marp-theme/index.html
 
 ## 基本的な使用方法
 
@@ -448,6 +429,6 @@ def hello_world():
 3. スライドが下にはみ出る
    - はみ出ないように内容を調整
 
-## 注意
+---
 
-このテーマはクラスメソッドの内部使用を目的として作成されています。
+このテーマはクラスメソッド社の内部使用を目的として作成されています。
