@@ -1,0 +1,532 @@
+/* 
+ * @theme classmethod
+ * @auto-scaling true
+*/
+
+@import 'default';
+
+:root {
+    /* アクセントカラー */
+    --blue-very-deep: #2C67E5;
+    --red-deep: #DF3756;
+
+    /* グレースケール（ClassMethod規定） */
+    --gray-darkest: #000000;
+
+    /* 最も濃いグレー */
+    --gray-dark: #262626;
+
+    /* 濃いグレー - メインテキスト */
+    --gray-medium: #434343;
+
+    /* 中間グレー - サブテキスト */
+    --gray-light: #595959;
+
+    /* 薄いグレー - 補助テキスト */
+    --gray-lighter: #646464;
+
+    /* より薄いグレー - ボーダー等 */
+    --gray-lightest: #999999;
+
+    /* 基本カラー */
+    --white: #FFFFFF;
+    --black: #000000;
+
+    /* 背景カラー */
+    --bg-default: #FFFFFF;
+
+    /* 標準背景色（白） */
+    --bg-accent: #F3F3F3;
+
+    /* アクセント背景色 */
+    --bg-accent-code: #e1e1e1;
+
+
+
+    /* フォントサイズ変数 */
+    --font-size-title: 40px;
+
+    /* タイトル */
+    --font-size-large: 36px;
+
+    /* 大きなテキスト */
+    --font-size-medium: 32px;
+
+    /* 中サイズテキスト */
+    --font-size-body: 26px;
+
+    /* 本文サイズ */
+    --font-size-small: 22px;
+
+    /* 小さなテキスト */
+    --font-size-caption: 20px;
+
+    /* キャプション */
+    --font-size-note: 16px;
+
+    /* 注釈 */
+    --border-color: #D9D9D9;
+
+
+    /* 行間変数 */
+    --line-height-tight: 1.15;
+
+    /* 狭い行間 */
+    --line-height-normal: 1.21;
+
+    /* 標準行間 */
+    --line-height-loose: 1.5;
+
+    /* レイアウト */
+    --slide-width: 1920px;
+    --slide-height: 1080px;
+    --content-padding: 92px;
+    --border-radius: 8px;
+    --border-width: 1.47px;
+}
+
+*:not(code *) {
+    color: var(--gray-medium);
+}
+
+/* 基本的なマークダウンタグのスタイル */
+
+/* 見出しタグ */
+h1 {
+    font-size: var(--font-size-title);
+    line-height: var(--line-height-tight);
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    line-height: var(--line-height-tight);
+    font-weight: 600;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+h3 {
+    font-size: var(--font-size-medium);
+    color: var(--gray-medium);
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h4 {
+    font-size: var(--font-size-body);
+    color: var(--gray-medium);
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h5 {
+    font-size: var(--font-size-small);
+    color: var(--gray-medium);
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h6 {
+    font-size: var(--font-size-caption);
+    color: var(--gray-medium);
+    line-height: var(--line-height-normal);
+    font-weight: 600;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+h1>strong,
+h2>strong,
+h3>strong,
+h4>strong,
+h5>strong,
+h6>strong {
+    color: var(--blue-very-deep);
+}
+
+/* 本文・段落 */
+p {
+    font-size: var(--font-size-body);
+    color: var(--gray-dark);
+    line-height: var(--line-height-loose);
+    margin-bottom: 16px;
+    margin-top: 0;
+}
+
+/* リスト */
+ul,
+ol {
+    font-size: var(--font-size-body);
+    color: var(--gray-dark);
+    line-height: var(--line-height-loose);
+    padding-left: 0px;
+    margin-top: 8px;
+    margin-left: 16px;
+    margin-bottom: 14px;
+
+    >li:first-child {
+        margin-top: 0;
+    }
+}
+
+li {
+    padding-top: 8px;
+
+    ul,
+    ol {
+        margin-left: 0;
+        padding-left: 32px;
+        margin-top: 0;
+    }
+
+}
+
+code {
+    background-color: var(--bg-accent-code);
+    color: var(--gray-darkest);
+}
+
+/* 強調・斜体 */
+strong {
+    font-weight: 700;
+    color: var(--gray-medium);
+}
+
+em {
+    font-style: italic;
+    color: var(--gray-medium);
+}
+
+:is(pre, marp-pre) {
+    background-color: var(--bg-accent-code);
+    font-size: var(--font-size-small);
+}
+
+/* 引用 */
+blockquote {
+    font-size: var(--font-size-body);
+    color: var(--gray-medium);
+    border-left: 4px solid var(--gray-light);
+    padding-left: 1rem;
+    margin: 1rem 0;
+    font-style: italic;
+
+    &::after {
+        display: none;
+    }
+
+    &::before {
+        display: none;
+    }
+
+    p::after {
+        display: none;
+    }
+}
+
+/* リンク */
+a {
+    color: var(--blue-very-deep);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 表 */
+table {
+    font-size: 18px;
+    color: var(--gray-medium);
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--white);
+
+    thead {
+
+        th {
+            background-color: var(--bg-accent);
+            color: var(--gray-medium);
+            border: 1.3px solid var(--border-color);
+            font-weight: 400;
+        }
+    }
+
+    tbody {
+        tr {
+            td {
+                background-color: var(--white);
+                color: var(--gray-medium);
+                border: 1.3px solid var(--border-color);
+            }
+
+            &:nth-child(odd) {
+                td {
+                    background-color: var(--white);
+                }
+            }
+        }
+    }
+
+}
+
+
+/* 小さなテキスト・注釈 */
+small {
+    font-size: var(--font-size-note);
+    color: var(--gray-light);
+    line-height: var(--line-height-normal);
+}
+
+
+section {
+    background-color: var(--bg-default);
+    background-image: none;
+    font-family: var(--font-family);
+    height: 100%;
+    padding: 100px 60px 0 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    &.no-header {
+        padding: 30px 60px 0 60px;
+    }
+
+    >h1:first-child:not(.no-header > h1) {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding-left: 40px;
+        color: var(--gray-medium);
+        margin: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black);
+            z-index: 100;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        top: 0px;
+        right: 30px;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        padding: 0;
+        font-size: var(--font-size-caption);
+        color: var(--gray-lightest);
+        margin: 0;
+    }
+
+
+    &.title {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--bg-accent);
+        padding: 100px;
+
+
+        h1 {
+            text-align: center;
+            position: static;
+        }
+
+        ::after {
+            display: none;
+        }
+
+    }
+
+    &.section {
+        background-color: var(--bg-accent);
+        padding: 0 100px;
+        justify-content: center;
+
+        h1 {
+            position: static;
+        }
+
+        ::after {
+            display: none;
+        }
+
+        >* {
+            margin: 0;
+            position: static;
+        }
+    }
+
+    &.image {
+        >p:has(img) {
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    &.content-image {
+        >p:has(img) {
+            height: fit-content;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+        }
+
+    }
+
+    &.content-image-right {
+        padding-right: 50%;
+
+        &.content-30 {
+            padding-right: 70%;
+        }
+
+        &.content-40 {
+            padding-right: 60%;
+        }
+
+        &.content-60 {
+            padding-right: 40%;
+        }
+
+        &.content-70 {
+            padding-right: 30%;
+        }
+
+        &.content-80 {
+            padding-right: 20%;
+        }
+
+        p:has(img) {
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 80px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0;
+            padding-left: 16px;
+            padding-right: 20px;
+            background-color: var(--bg-accent);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &.content-image-left {
+        padding-left: 50%;
+
+        &.content-30 {
+            padding-left: 70%;
+        }
+
+        &.content-40 {
+            padding-left: 60%;
+        }
+
+        &.content-60 {
+            padding-left: 40%;
+        }
+
+        &.content-70 {
+            padding-left: 30%;
+        }
+
+        &.content-80 {
+            padding-left: 20%;
+        }
+
+        p:has(img) {
+            height: calc(100% - 80px);
+            position: absolute;
+            top: 80px;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0;
+            padding-left: 20px;
+            padding-right: 16px;
+            background-color: var(--bg-accent);
+
+            &::after {
+                display: none;
+            }
+        }
+    }
+
+    &.all-text-center,
+    &.h1-text-center h1,
+    &.h2-text-center h2,
+    &.h3-text-center h3,
+    &.h4-text-center h4,
+    &.h5-text-center h5,
+    &.h6-text-center h6,
+    &.text-center p {
+        text-align: center;
+    }
+
+    &.align-center {
+        justify-content: center;
+    }
+
+    &.all-text-blue *,
+    &.text-blue p {
+        color: var(--blue-very-deep);
+    }
+
+    &.all-text-red *,
+    &.h1-text-red h1,
+    &.h2-text-red h2,
+    &.h3-text-red h3,
+    &.h4-text-red h4,
+    &.h5-text-red h5,
+    &.h6-text-red h6,
+    &.text-red p {
+        color: var(--red-deep);
+    }
+
+    &.column-layout {
+        flex-direction: row;
+        gap: 16px;
+        justify-content: space-around;
+
+        .column {
+            width: 50%;
+        }
+    }
+
+}
