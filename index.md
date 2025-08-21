@@ -135,6 +135,23 @@ https://classmethod.github.io/classmethod-marp-theme/sample-slide.html
 
 ---
 
+
+# :robot:AIを使ってスライドを作成する方法（オススメ）
+
+1. スライドの内容を考える
+2. sample-slide.mdのテキストをコピー（下図参照）
+リンク: https://github.com/classmethod/classmethod-marp-theme/blob/main/sample-slide.md
+3. 生成AIのチャット欄に貼り付け
+```md
+{sample-slide.mdのコピペ}
+このテンプレートを使って〇〇.mdの内容のMarpスライドを作成して〇〇.mdに出力してください。
+```
+4. スライドの内容、レイアウト、画像のサイズを調整
+
+![w:500px](images/sample-slide-copy.png)
+
+---
+
 <!-- _class: all-text-center align-center -->
 
 ![w:450px](https://classmethod.jp/wp-content/themes/cmn/assets/images/common/logo_classmethod.svg)
