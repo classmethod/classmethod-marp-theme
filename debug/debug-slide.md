@@ -246,6 +246,13 @@ console.log(result);
 
 ---
 
+<!-- _class: image-shadow  -->
+
+# image-shadowクラスのテスト
+
+![w:300px](https://placehold.jp/ffffff/8c8c8c/150x150.png)
+
+---
 <!-- _class: column-layout -->
 
 # column-layoutクラスのテスト
