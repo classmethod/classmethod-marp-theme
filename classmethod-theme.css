@@ -41,10 +41,12 @@
     /* アクセント背景色 */
     --bg-accent-code: #e1e1e1;
 
+    /* 注釈 */
+    --border-color: #D9D9D9;
 
 
     /* フォントサイズ変数 */
-    --font-size-title: 40px;
+    --font-size-title: 38px;
 
     /* タイトル */
     --font-size-large: 36px;
@@ -64,10 +66,6 @@
     /* キャプション */
     --font-size-note: 16px;
 
-    /* 注釈 */
-    --border-color: #D9D9D9;
-
-
     /* 行間変数 */
     --line-height-tight: 1.15;
 
@@ -76,6 +74,46 @@
 
     /* 標準行間 */
     --line-height-loose: 1.5;
+
+    /* レイアウト */
+    --slide-width: 1920px;
+    --slide-height: 1080px;
+    --content-padding: 92px;
+    --border-radius: 8px;
+    --border-width: 1.47px;
+}
+
+section.small-text {
+    /* フォントサイズ変数（20%程度縮小） */
+
+    /* タイトル */
+    --font-size-large: 29px;
+
+    /* 大きなテキスト */
+    --font-size-medium: 26px;
+
+    /* 中サイズテキスト */
+    --font-size-body: 21px;
+
+    /* 本文サイズ */
+    --font-size-small: 18px;
+
+    /* 小さなテキスト */
+    --font-size-caption: 16px;
+
+    /* キャプション */
+    --font-size-note: 13px;
+
+    /* 行間変数 */
+
+    /* 狭い行間 */
+    --line-height-tight: 1;
+
+    /* 標準行間 */
+    --line-height-normal: 1.1;
+
+    /* 広い行間 */
+    --line-height-loose: 1.3;
 
     /* レイアウト */
     --slide-width: 1920px;
@@ -96,16 +134,18 @@ h1 {
     font-size: var(--font-size-title);
     line-height: var(--line-height-tight);
     font-weight: 600;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-bottom: 0;
 }
 
 h2 {
     font-size: var(--font-size-large);
     line-height: var(--line-height-tight);
     font-weight: 600;
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
 }
 
 h3 {
@@ -113,8 +153,9 @@ h3 {
     color: var(--gray-medium);
     line-height: var(--line-height-normal);
     font-weight: 600;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
 }
 
 h4 {
@@ -122,8 +163,9 @@ h4 {
     color: var(--gray-medium);
     line-height: var(--line-height-normal);
     font-weight: 600;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
 }
 
 h5 {
@@ -131,8 +173,9 @@ h5 {
     color: var(--gray-medium);
     line-height: var(--line-height-normal);
     font-weight: 600;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
 }
 
 h6 {
@@ -140,8 +183,9 @@ h6 {
     color: var(--gray-medium);
     line-height: var(--line-height-normal);
     font-weight: 600;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 0;
 }
 
 h1>strong,
@@ -156,9 +200,9 @@ h6>strong {
 /* 本文・段落 */
 p {
     font-size: var(--font-size-body);
-    color: var(--gray-dark);
+    color: var(--gray-medium);
     line-height: var(--line-height-loose);
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     margin-top: 0;
 }
 
@@ -166,20 +210,20 @@ p {
 ul,
 ol {
     font-size: var(--font-size-body);
-    color: var(--gray-dark);
+    color: var(--gray-medium);
     line-height: var(--line-height-loose);
     padding-left: 0px;
-    margin-top: 8px;
-    margin-left: 16px;
-    margin-bottom: 14px;
+    margin-top: 0;
+    margin-left: 22px;
+    margin-bottom: 8px;
+}
 
-    >li:first-child {
-        margin-top: 0;
-    }
+ol {
+    margin-left: 32px;
 }
 
 li {
-    padding-top: 8px;
+    padding-top: 6px;
 
     ul,
     ol {
@@ -188,6 +232,33 @@ li {
         margin-top: 0;
     }
 
+    &:first-child {
+        padding-top: 0;
+    }
+
+    &+li {
+        margin-top: 0;
+    }
+
+    &::marker {
+        margin-left: 6px;
+    }
+
+}
+
+/* 見出し直後のリストのマージンを削除 */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    &+ul,
+    &+ol {
+        margin-top: 0;
+    }
 }
 
 code {
@@ -209,6 +280,7 @@ em {
 :is(pre, marp-pre) {
     background-color: var(--bg-accent-code);
     font-size: var(--font-size-small);
+    margin-bottom: 8px;
 }
 
 /* 引用 */
@@ -217,7 +289,7 @@ blockquote {
     color: var(--gray-medium);
     border-left: 4px solid var(--gray-light);
     padding-left: 1rem;
-    margin: 1rem 0;
+    margin: 12px 0;
     font-style: italic;
 
     &::after {
@@ -277,7 +349,6 @@ table {
             }
         }
     }
-
 }
 
 

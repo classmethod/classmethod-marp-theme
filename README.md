@@ -239,6 +239,16 @@ https://classmethod.github.io/classmethod-marp-theme/index.html
 ヘッダーが表示されないスライド
 ```
 
+#### 文字を小さくする
+```markdown
+<!-- _class: small-text -->
+
+# 文字を小さくする
+
+スライド全体のフォントサイズが20%程度縮小されます。
+情報量が多いスライドや、通常のサイズでは収まりきらない内容を表示する際に便利です。
+```
+
 ## マークダウン要素のスタイリング
 
 ### 見出し（Headings）

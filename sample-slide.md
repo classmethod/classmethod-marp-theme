@@ -11,7 +11,7 @@ description: サンプルスライドです。
 特にスライド上部にある"_class: "は大切な要素なので間違えないようにしてください
  -->
 
-<!-- _class: title -->
+<!-- _class: title　-->
 <!-- _paginate: false -->
 
 ![classmethod-logo w:400px](https://classmethod.jp/wp-content/themes/cmn/assets/images/common/logo_classmethod.svg)
@@ -356,6 +356,16 @@ $$
 このスライドはページ番号が表示されなくなります（`_paginate: false`）。
 
 目次や表紙などでページ番号を表示したくない場合に使用します
+
+---
+
+<!-- _class: small-text -->
+
+# 文字を小さくする
+
+`small-text` クラスを使用すると、スライド全体のフォントサイズが20%程度縮小されます。
+
+情報量が多いスライドや、通常のサイズでは収まりきらない内容を表示する際に便利です。
 
 ---
 
