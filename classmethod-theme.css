@@ -212,7 +212,7 @@ ol {
     font-size: var(--font-size-body);
     color: var(--gray-medium);
     line-height: var(--line-height-loose);
-    padding-left: 0px;
+    padding-left: 4px;
     margin-top: 0;
     margin-left: 22px;
     margin-bottom: 8px;
@@ -289,7 +289,7 @@ blockquote {
     color: var(--gray-medium);
     border-left: 4px solid var(--gray-light);
     padding-left: 1rem;
-    margin: 12px 0;
+    margin: 12px 4px;
     font-style: italic;
 
     &::after {
