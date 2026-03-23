@@ -46,24 +46,26 @@
 
 
     /* フォントサイズ変数 */
-    --font-size-title: 38px;
 
     /* タイトル */
-    --font-size-large: 36px;
+    --font-size-title: 38px;
 
     /* 大きなテキスト */
-    --font-size-medium: 32px;
+    --font-size-large: 36px;
 
     /* 中サイズテキスト */
-    --font-size-body: 26px;
+    --font-size-medium: 32px;
 
     /* 本文サイズ */
-    --font-size-small: 22px;
+    --font-size-body: 26px;
 
     /* 小さなテキスト */
-    --font-size-caption: 20px;
+    --font-size-small: 22px;
 
     /* キャプション */
+    --font-size-caption: 20px;
+
+    /* 注釈 */
     --font-size-note: 16px;
 
     /* 行間変数 */
@@ -86,22 +88,22 @@
 section.small-text {
     /* フォントサイズ変数（20%程度縮小） */
 
-    /* タイトル */
+    /* 大きなテキスト */
     --font-size-large: 29px;
 
-    /* 大きなテキスト */
+    /* 中サイズテキスト */
     --font-size-medium: 26px;
 
-    /* 中サイズテキスト */
+    /* 本文サイズ */
     --font-size-body: 21px;
 
-    /* 本文サイズ */
+    /* 小さなテキスト */
     --font-size-small: 18px;
 
-    /* 小さなテキスト */
+    /* キャプション */
     --font-size-caption: 16px;
 
-    /* キャプション */
+    /* 注釈 */
     --font-size-note: 13px;
 
     /* 行間変数 */
